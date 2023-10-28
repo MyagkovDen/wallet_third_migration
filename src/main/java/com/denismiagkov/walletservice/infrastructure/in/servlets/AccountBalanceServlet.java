@@ -23,12 +23,6 @@ public class AccountBalanceServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-//        DatabaseConnection dbConnection = new DatabaseConnection();
-//        try {
-//            Connection connection = dbConnection.getConnection();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
         controller = new Controller(new Service());
         objectMapper = new ObjectMapper();
         authService = new AuthService();
